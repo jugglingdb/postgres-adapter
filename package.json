@@ -1,0 +1,22 @@
+{
+  "name": "jugglingdb-postgres",
+  "version": "0.0.1",
+  "description": "PostgreSQL adapter for JugglingDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit test/postgres.js"
+  },
+  "dependencies": {
+    "jugglingdb": "= 0.2.x",
+    "pg": "= 0.7.2"
+  },
+  "devDependencies": {
+    "nodeunit": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1602/jugglingdb-postgres.git"
+  },
+  "author": "Anatoliy Chakkaev <mail@anatoliy.in>",
+  "license": "MIT"
+}
