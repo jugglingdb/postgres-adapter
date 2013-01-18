@@ -3,7 +3,9 @@ var jdb = require('jugglingdb'),
     test = jdb.test,
     schema = new Schema(__dirname + '/..', {
         database:'myapp_test',
-        username:'postgres'
+        username:'dbadmin',
+        password: 'dbadmin',
+        port: '9999'
     });
 
 test(module.exports, schema);
@@ -36,3 +38,31 @@ test.it('all should support arbitrary expressions', function (test) {
         });
     });
 })
+
+test.it('all should support like operator ', function (test) {
+    Post = schema.models.Post;
+    Post.destroyAll(function () {
+        Post.create({title:'Postgres Test Title'}, function (err, post) {
+            var id = post.id
+            Post.all({where:{title:{like:'%Test%'}}}, function (err, post) {
+                test.ok(!err);
+                test.ok(post[0].id == id);
+                test.done();
+            });
+        });
+    });
+});
+
+test.it('all should support \'not like\' operator ', function (test) {
+    Post = schema.models.Post;
+    Post.destroyAll(function () {
+        Post.create({title:'Postgres Test Title'}, function (err, post) {
+            var id = post.id
+            Post.all({where:{title:{nlike:'%Test%'}}}, function (err, post) {
+                test.ok(!err);
+                test.ok(post.length===0);
+                test.done();
+            });
+        });
+    });
+});
