@@ -3,9 +3,7 @@ var jdb = require('jugglingdb'),
     test = jdb.test,
     schema = new Schema(__dirname + '/..', {
         database:'myapp_test',
-        username:'dbadmin',
-        password: 'dbadmin',
-        port: '9999'
+        username:'postgres'
     });
 
 test(module.exports, schema);
