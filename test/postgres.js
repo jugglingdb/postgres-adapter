@@ -9,7 +9,7 @@ var jdb = require('jugglingdb'),
 test(module.exports, schema);
 
 
-test.it('should handle empty string numbers (like a model parsed an update POST)', function (test) {
+test.it('should not generate malformed SQL for number columns set to empty string', function (test) {
     var Post = schema.define('posts', {
         title: { type: String }
         , userId: { type: Number }
