@@ -21,7 +21,6 @@ test.it('should not generate malformed SQL for number columns set to empty strin
             var id = post.id
             Post.all({where:{title:'no userId'}}, function (err, post) {
                 test.ok(!err);
-                console.log(JSON.stringify(post));
                 test.ok(post[0].id == id);
                 test.done();
             });
