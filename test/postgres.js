@@ -64,3 +64,31 @@ test.it('all should support \'not like\' operator ', function (test) {
         });
     });
 });
+
+test.it('all should support arbitrary where clauses', function (test) {
+    Post = schema.models.Post;
+    Post.destroyAll(function () {
+        Post.create({title:'Postgres Test Title'}, function (err, post) {
+            var id = post.id;
+            Post.all({where:"title = 'Postgres Test Title'"}, function (err, post) {
+                test.ok(!err);
+                test.ok(post[0].id == id);
+                test.done();
+            });
+        });
+    });
+});
+
+test.it('all should support arbitrary parameterized where clauses', function (test) {
+    Post = schema.models.Post;
+    Post.destroyAll(function () {
+        Post.create({title:'Postgres Test Title'}, function (err, post) {
+            var id = post.id;
+            Post.all({where:['title = ?', 'Postgres Test Title']}, function (err, post) {
+                test.ok(!err);
+                test.ok(post[0].id == id);
+                test.done();
+            });
+        });
+    });
+});
