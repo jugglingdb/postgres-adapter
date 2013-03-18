@@ -1,0 +1,33 @@
+{
+  "name": "jugglingdb-postgres",
+  "version": "0.0.1",
+  "description": "PostgreSQL adapter for JugglingDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit test/postgres.js"
+  },
+  "dependencies": {
+    "jugglingdb": "= 0.2.x",
+    "pg": "= 0.7.2"
+  },
+  "devDependencies": {
+    "nodeunit": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1602/jugglingdb-postgres.git"
+  },
+  "author": {
+    "name": "Anatoliy Chakkaev",
+    "email": "mail@anatoliy.in"
+  },
+  "license": "MIT",
+  "readme": "## JugglingDB-Postgres [![Build Status](https://travis-ci.org/1602/jugglingdb-postgres.png)](https://travis-ci.org/1602/jugglingdb-postgres)\n\nPostgreSQL adapter for JugglingDB.\n\n## Usage\n\nTo use it you need `jugglingdb@0.2.x`.\n\n1. Setup dependencies in `package.json`:\n\n    ```json\n    {\n      ...\n      \"dependencies\": {\n        \"jugglingdb\": \"0.2.x\",\n        \"jugglingdb-postgres\": \"latest\"\n      },\n      ...\n    }\n    ```\n\n2. Use:\n\n    ```javascript\n        var Schema = require('jugglingbd').Schema;\n        var schema = new Schema('postgres', {\n            database: 'myapp_test',\n            username: 'postgres'\n            // host: 'localhost',\n            // port: 5432,\n            // password: s.password,\n            // database: s.database,\n            // debug: false\n        });\n    ```\n\n## Running tests\n\n    npm test\n\n## MIT License\n\n    Copyright (C) 2012 by Anatoliy Chakkaev\n    \n    Permission is hereby granted, free of charge, to any person obtaining a copy\n    of this software and associated documentation files (the \"Software\"), to deal\n    in the Software without restriction, including without limitation the rights\n    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n    copies of the Software, and to permit persons to whom the Software is\n    furnished to do so, subject to the following conditions:\n    \n    The above copyright notice and this permission notice shall be included in\n    all copies or substantial portions of the Software.\n    \n    THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n    THE SOFTWARE.\n\n",
+  "readmeFilename": "README.md",
+  "_id": "jugglingdb-postgres@0.0.1",
+  "dist": {
+    "shasum": "5b4203caeea55b3a74c2a2a61fefca6fcaa86331"
+  },
+  "_resolved": "git://github.com/abroweb/jugglingdb-postgres.git#e7a36e6b9e8337d5872878a8db644f657b9bb603",
+  "_from": "jugglingdb-postgres@git://github.com/abroweb/jugglingdb-postgres.git"
+}
