@@ -1,4 +1,4 @@
-## JugglingDB-Postgres [![Build Status](https://travis-ci.org/1602/jugglingdb-postgres.png)](https://travis-ci.org/1602/jugglingdb-postgres)
+## JugglingDB-Postgres [![Build Status](https://travis-ci.org/jugglingdb/postgres-adapter.png)](https://travis-ci.org/jugglingdb/postgres-adapter)
 
 PostgreSQL adapter for JugglingDB.
 
