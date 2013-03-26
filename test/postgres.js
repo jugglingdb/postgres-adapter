@@ -9,6 +9,25 @@ var jdb = require('jugglingdb'),
 test(module.exports, schema);
 
 
+test.it('should not generate malformed SQL for number columns set to empty string', function (test) {
+    var Post = schema.define('posts', {
+        title: { type: String }
+        , userId: { type: Number }
+    });
+    var post = new Post({title:'no userId', userId:''});
+
+    Post.destroyAll(function () {
+        post.save(function (err, post) {
+            var id = post.id
+            Post.all({where:{title:'no userId'}}, function (err, post) {
+                test.ok(!err);
+                test.ok(post[0].id == id);
+                test.done();
+            });
+        });
+    });
+});
+
 test.it('all should support regex', function (test) {
     Post = schema.models.Post;
 
