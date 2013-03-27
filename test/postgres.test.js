@@ -1,13 +1,7 @@
-var jdb = require('jugglingdb'),
-    Schema = jdb.Schema,
-    test = jdb.test,
-    schema = new Schema(__dirname + '/..', {
-        database:'myapp_test',
-        username:'postgres'
-    });
+require('jugglingdb/test/common.batch.js');
+require('jugglingdb/test/include.test.js');
 
-test(module.exports, schema);
-
+return;
 
 test.it('all should support regex', function (test) {
     Post = schema.models.Post;
