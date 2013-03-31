@@ -5,6 +5,6 @@ global.getSchema = function() {
         database:'myapp_test',
         username:'postgres'
     });
-    db.log = function (a) { console.log(a); };
+    // db.log = function (a) { console.log(a); };
     return db;
 };
