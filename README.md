@@ -30,6 +30,7 @@ To use it you need `jugglingdb@0.2.x`.
             // port: 5432,
             // password: s.password,
             // database: s.database,
+            // ssl: true,
             // debug: false
         });
     ```
