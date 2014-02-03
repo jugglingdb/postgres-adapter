@@ -1,6 +1,6 @@
 {
   "name": "jugglingdb-postgres",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "PostgreSQL adapter for JugglingDB",
   "main": "index.js",
   "scripts": {
