@@ -4,7 +4,7 @@ This is a fork of the [postgres-adapter](https://github.com/jugglingdb/postgres-
 
 1. Support for `float` datatypes, ala the mysql adapter. Just add `dataType: 'double'` to your column properties:
 
-  ```json
+  ```javascript
   var Model = schema.define('Model', {
     realNumber: {type: Number, dataType: 'double'}
   });
