@@ -1,14 +1,47 @@
-# JugglingDB-Postgres
+## JugglingDB-Postgres [![Build Status](https://travis-ci.org/jugglingdb/postgres-adapter.png)](https://travis-ci.org/jugglingdb/postgres-adapter)
 
-This is a fork of the [postgres-adapter](https://github.com/jugglingdb/postgres-adapter) for jugglingdb. The latest sync with the upstream branch was March 22nd, 2014.
+PostgreSQL adapter for JugglingDB.
 
-This fork includes the following features:
+## Usage
 
-1. Support for `float` datatypes, ala the mysql adapter. Just add `dataType: 'double'` to your column properties:
+To use it you need `jugglingdb@0.2.x`.
+
+1. Setup dependencies in `package.json`:
+
+    ```json
+    {
+      ...
+      "dependencies": {
+        "jugglingdb": "0.2.x",
+        "jugglingdb-postgres": "latest"
+      },
+      ...
+    }
+    ```
+
+2. Use:
+
+    ```javascript
+        var Schema = require('jugglingdb').Schema;
+        var schema = new Schema('postgres', {
+            database: 'myapp_test',
+            username: 'postgres'
+            // host: 'localhost',
+            // port: 5432,
+            // password: s.password,
+            // database: s.database,
+            // ssl: true,
+            // debug: false
+        });
+    ```
+
+### Additional Features
+
+1. Support for `float` datatypes, ala the mysql adapter. Just add `dataType: 'float'` to your column properties:
 
   ```javascript
   var Model = schema.define('Model', {
-    realNumber: {type: Number, dataType: 'double'}
+    realNumber: {type: Number, dataType: 'float'}
   });
   ```
 
@@ -40,3 +73,30 @@ This fork includes the following features:
   ```
   
   See the [postgres documentation](http://www.postgresql.org/docs/9.1/static/sql-createindex.html) for more information about `type` and `kind`.
+
+## Running tests
+
+    npm test
+
+## MIT License
+
+    Copyright (C) 2012 by Anatoliy Chakkaev
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+
