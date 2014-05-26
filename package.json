@@ -20,5 +20,6 @@
     "url": "https://github.com/jugglingdb/postgres.git"
   },
   "author": "Anatoliy Chakkaev <mail@anatoliy.in>",
-  "license": "MIT"
+  "license": "MIT",
+  "contributors": ["Bob Matcuk (http://squeg.net/)"]
 }
