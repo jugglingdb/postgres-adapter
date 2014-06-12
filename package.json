@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "jugglingdb": "= 0.2.x",
-    "underscore": "*",
     "pg": "~2"
   },
   "devDependencies": {
