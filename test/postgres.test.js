@@ -121,19 +121,23 @@ it('all should support \'or\' operator', function (done) {
     Post.destroyAll(function () {
         Post.create({title:'First Title',userId:1}, function (err, post1) {
             Post.create({title:'Second Title',userId:2}, function (err, post2) {
-                var where = {
-                    or: {
-                        title: 'First Title',
-                        userId: 2
-                    }
-                };
-                Post.all({where: where}, function (err, posts) {
-                    assert.ok(!err);
-                    assert.ok(posts.length === 2);
-                    done();
+                Post.create({title:'Third Title',userId:3}, function (err, post2) {
+                    var where = {
+                        or: [{
+                            title: 'First Title',
+                            userId: 1
+                        },{
+                            title: 'Second Title',
+                            userId: 2
+                        }]
+                    };
+                    Post.all({where: where}, function (err, posts) {
+                        assert.ok(!err);
+                        assert.ok(posts.length === 2);
+                        done();
+                    });
                 });
             });
         });
     });
 });
-
