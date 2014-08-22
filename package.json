@@ -13,7 +13,7 @@
   "devDependencies": {
     "jugglingdb": "https://github.com/1602/jugglingdb/archive/master.tar.gz",
     "semicov": "*",
-    "should": "~1.2.2",
+    "should": "~3.0.1",
     "mocha": "~1.8.2"
   },
   "repository": {
