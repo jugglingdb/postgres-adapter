@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "jugglingdb": "= 0.2.x",
-    "pg": "~3"
+    "pg": "~4"
   },
   "devDependencies": {
     "jugglingdb": "https://github.com/1602/jugglingdb/archive/master.tar.gz",
