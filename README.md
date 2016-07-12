@@ -108,6 +108,12 @@ To use it you need `jugglingdb@0.2.x`.
 
 ## Running tests
 
+    docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD= -d postgres
+    docker exec $(docker ps -f name=postgres -q) \
+           psql -c 'create database myapp_test;' -U postgres
+
+    export POSTGRES_HOST=`docker-machine ip your-docker-machine-name`
+
     npm test
 
 ## MIT License
