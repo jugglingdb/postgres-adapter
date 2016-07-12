@@ -1,6 +1,6 @@
 machine:
   services:
-    - postgres
+    - postgresql
 database:
   override:
     - "psql -c 'create database myapp_test;' -U postgres"
