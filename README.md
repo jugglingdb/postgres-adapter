@@ -1,4 +1,10 @@
-## JugglingDB-Postgres [![Build Status](https://travis-ci.org/jugglingdb/postgres-adapter.png)](https://travis-ci.org/jugglingdb/postgres-adapter)
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Build status][build-image]][build-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
+[![Dependency Status][dependencies-image]][dependencies-url]
+
+## JugglingDB-Postgres
 
 PostgreSQL adapter for JugglingDB.
 
@@ -137,4 +143,15 @@ To use it you need `jugglingdb@0.2.x`.
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
+
+[coveralls-url]: https://coveralls.io/github/jugglingdb/postgres-adapter
+[coveralls-image]: https://coveralls.io/repos/github/jugglingdb/postgres-adapter/badge.svg
+[build-url]: https://circleci.com/gh/jugglingdb/postgres-adapter
+[build-image]: https://circleci.com/gh/jugglingdb/postgres-adapter.svg?style=shield
+[npm-image]: https://img.shields.io/npm/v/jugglingdb-postgres.svg
+[npm-url]: https://npmjs.org/package/jugglingdb-postgres
+[downloads-image]: https://img.shields.io/npm/dm/jugglingdb-postgres.svg
+[downloads-url]: https://npmjs.org/package/jugglingdb-postgres
+[dependencies-image]: https://david-dm.org/jugglingdb/postgres-adapter.svg
+[dependencies-url]: https://david-dm.org/jugglingdb/postgres-adapter
 
