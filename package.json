@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "jugglingdb": "2.0.0-rc5",
-    "pg": "~3"
+    "pg": "^6.0.2"
   },
   "devDependencies": {
     "istanbul": "^0.4.4",
