@@ -12,5 +12,7 @@ database:
 
 test:
   override:
-    - npm run test-ci
+    - nvp use 4 && npm run test-ci
+    - nvp use 5 && npm run test-ci
+    - nvp use 6 && npm run test-ci
     - npm i coveralls && export COVERALLS_GIT_COMMIT=`git rev-parse HEAD` && cat ./coverage/lcov.info | coveralls
